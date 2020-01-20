@@ -26,6 +26,7 @@ import * as opusAction from 'actions/opus';
 /* components */
 import LayoutView from 'views/layout/Layout';
 import VideoView from 'views/pages/video';
+import VideoDetailView from 'views/pages/videoDetail';
 import AvatarView from 'views/pages/avatar';
 import OpusView from 'views/pages/opus';
 
@@ -58,6 +59,7 @@ var connectRedux = function(component, model = [], actions = null) {
 
 let Layout = connectRedux(LayoutView, ['layout'], layoutAction);
 let Video = connectRedux(VideoView, ['video'], videoAction);
+let VideoDetail = connectRedux(VideoDetailView, ['videoDetail'], videoAction);
 let Avatar = connectRedux(AvatarView, ['avatar'], avatarAction);
 let Opus = connectRedux(OpusView, ['opus'], opusAction);
 
@@ -75,7 +77,7 @@ export default (
       <Route path="video" component={ Video } />
       <Route path="avatar" component={ Avatar } />
       <Route path="opus" component={ Opus } />
-      <Route path="video/:id" component={ Video } />
+      <Route path="detail/:id" component={ VideoDetail } />
       <Route path="opus/:id" component={ Opus } />
       <Redirect from="*" to="/opus" />
     </Route>
