@@ -1,16 +1,15 @@
-import { combineReducers } from 'redux';
+import {
+	combineReducers
+} from 'redux';
 
 import layout from 'reducers/layout';
-import travelApply from 'reducers/apply';
-import travelAuditList from 'reducers/auditList';
-import travelAuditedList from 'reducers/auditedList';
-import travelMyList from 'reducers/myList';
-import travelDetailAudit from 'reducers/detailAudit';
+import video from 'reducers/video';
+import avatar from 'reducers/avatar';
+import opus from 'reducers/opus';
 
 export default combineReducers({
 	layout,
-	travelApply,
-	travelAuditList,
-	travelMyList,
-	travelDetailAudit
+	video,
+	avatar,
+	opus,
 });

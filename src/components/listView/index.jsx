@@ -177,7 +177,7 @@ export default class ListView extends Component {
 							</If>
 						</div>
 					</If>
-					<div className="scrollContent">
+					<div className="scrollContent clearfix">
 						{children}
 					</div>
 					<If condition={loadable && !isEnd}>

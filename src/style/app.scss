@@ -23,6 +23,47 @@
 	overflow: hidden;
 }
 
+.scrollContent{
+	padding: 1%;
+    margin-right: -1%;
+    .list-item{
+    	float:left;
+		position: relative;
+	    width: 49%;
+	    height: 395px;
+	    margin-right: 1%;
+	    border-radius: 2%;
+	    background: #fff;
+	    margin-bottom: 1%;
+	    overflow: hidden;
+	    img{
+	    	width: 100%;
+	    }
+	    .video-tag{
+	    	display: block;
+	    	position: absolute;
+	    	top: 0;
+	    	right: 0;
+	    	left: 0;
+	    	bottom: 0;
+	    	margin: auto;
+	    	width: 50px;
+	    	height: 50px;
+		    font-size: 50px;
+		    color: #efefef;
+	    }
+	    .detail-desc{
+		    font-size: 14px;
+		    color: #666;
+		    line-height: 26px;
+		    margin: 0 10px 5px;
+		    overflow: hidden;
+	    }
+	}
+}
+
+
+
 .user{
 	width: 34px;
 	height:34px;

@@ -7,10 +7,9 @@ import Util from 'core/util';
 export default class Layout extends Component {
 
 	tabBarDataListAudit = [
-		{link: "apply", tabName: "申请", icon: "custom-apply", key: "apply"},
-		{link: "audit", tabName: "待审批", icon: "custom-audit", key: "audit"},
-		{link: "audited", tabName: "已审批", icon: "custom-audited", key: "audited"},
-		{link: "my", tabName: "我的", icon: "custom-my", key: "my"} 
+		{link: "video", tabName: "视频", icon: "custom-video", key: "video"},
+		{link: "avatar", tabName: "头像", icon: "custom-avatar", key: "avatar"},
+		{link: "opus", tabName: "作品", icon: "custom-opus", key: "opus"} 
 	]
 
 	constructor(props){
