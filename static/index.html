@@ -21,6 +21,12 @@
 		<link rel="apple-touch-icon-precomposed" href="http://s21.mogucdn.com/pic/150430/app_iezwemztmyydkmdfgazdambqgyyde_144x144.png">
 		<link rel="icon" href="http://s21.mogucdn.com/pic/150430/app_iezwemztmyydkmdfgazdambqgyyde_144x144.png" type="image/png" />
 		<link href="/app.css" rel="stylesheet">
+		<script type="text/javascript">
+			document.getElementsByTagName('html')[0].style.fontSize = (Math.min(document.getElementsByTagName('html')[0].clientWidth, 750) / 750 * 100).toFixed(1) + 'px';
+	    	window.addEventListener('resize', function () {
+	        	document.getElementsByTagName('html')[0].style.fontSize = (Math.min(document.getElementsByTagName('html')[0].clientWidth, 750) / 750 * 100).toFixed(1) + 'px';
+	    	})
+		</script>		
 	</head>
 	<body>
 		<div id="appWrapper"></div>

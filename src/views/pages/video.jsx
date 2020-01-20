@@ -59,11 +59,13 @@ export default class VideoList extends BaseComponent {
 		let list = this.props.videos;//this.state.list;
 		// console.log(this.props.videos);
 		return (
-			<ListView className="weui-cells" onRefresh={this.onRefresh} onLoad={ this.onLoad } isEnd={this.state.isEnd}>
+			<ListView onRefresh={this.onRefresh} onLoad={ this.onLoad } isEnd={this.state.isEnd}>
 				<For each = "item" of = { list } index = "index">
 					<div className="list-item" key={index}>
 						<Link>
-							<img src = {item.background} />
+							<div className="detail-image">
+								<img src = {item.background} />
+							</div>
 							<Icon name="custom-play" className="video-tag"/>
 							<div className="detail-desc">{item.title}</div>
 						</Link>
