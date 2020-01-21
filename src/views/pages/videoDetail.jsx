@@ -17,7 +17,8 @@ export default class VideoList extends BaseComponent {
 
 	componentDidMount() {
 		let { location } = this.props;
-		this.player = videoJs('player', {'width': '100%', 'height': '100%', 'controls': true, preload: "auto", 'poster': location.query.background, 'sources': [{'src': location.query.source, 'type': 'video/mp4'}]}, function(){ 
+		let width =  
+		this.player = videoJs('player', {'width': document.body.clientWidth, 'height': document.body.clientHeight, 'controls': true, preload: "auto", 'poster': location.query.background, 'sources': [{'src': location.query.source, 'type': 'video/mp4'}]}, function(){ 
 			videoJs.log('Your player is ready!');
 
 		    // In this context, `this` is the player that was created by Video.js.
@@ -37,8 +38,6 @@ export default class VideoList extends BaseComponent {
 	}
 
 	render() {
-		let { location } = this.props;
-		// console.log(this.props.videos);
 		return (
 			<div className="playerWrap">
 				<video id="player" className="video-js"></video>
