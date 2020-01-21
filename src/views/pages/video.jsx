@@ -62,7 +62,7 @@ export default class VideoList extends BaseComponent {
 			<ListView onRefresh={this.onRefresh} onLoad={ this.onLoad } isEnd={this.state.isEnd}>
 				<For each = "item" of = { list } index = "index">
 					<div className="list-item" key={index}>
-						<Link to={`/detail/${item.id}?source=${item.source}`}>
+						<Link to={{pathname: `/detail/${item.id}`, query:{ source: item.source, background: item.background}}}>
 							<div className="detail-image">
 								<img src = {item.background} />
 							</div>
