@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { browserHistory, Link } from  'react-router'
 import classnames from 'classnames';
-import videoJs from 'video.js';
 import ListView from 'components/listView';
 import Icon from 'components/icon'
 import BaseComponent from 'core/baseComponent'
@@ -16,31 +15,22 @@ export default class VideoList extends BaseComponent {
 	}
 
 	componentDidMount() {
-		let { location } = this.props;
-		let width =  
-		this.player = videoJs('player', {'width': document.body.clientWidth, 'height': document.body.clientHeight, 'controls': true, preload: "auto", 'poster': location.query.background, 'sources': [{'src': location.query.source, 'type': 'video/mp4'}]}, function(){ 
-			videoJs.log('Your player is ready!');
 
-		    // In this context, `this` is the player that was created by Video.js.
-			// this.play();
-
-			// How about an event listener?
-			this.on('ended', function() {
-			    videoJs.log('Awww...over so soon?!');
-			});
-		});
 	}
 
 	componentWillUnmount() {
-	    if (this.player) {
-	    	this.player.dispose()
-	    }
+	 
 	}
 
 	render() {
+		let { location } = this.props;
+		let width = document.body.clientWidth;
+		let height = document.body.clientHeight;
 		return (
 			<div className="playerWrap">
-				<video id="player" className="video-js"></video>
+				<video id="player" width={width} height={height} controls preload="auto" poster={location.query.background} style={{'background': '#000'}}>
+					<source src={location.query.source} type="video/mp4"></source>
+				</video>
 			</div>
 		)
 	}

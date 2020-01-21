@@ -28,7 +28,6 @@ FastClick.attach(document.body);
 //*************样式加载**************
 // import 'normalize.css';//样式引入
 import 'weui/dist/style/weui.css';
-import 'video.js/dist/video-js.css';
 import 'style/app.scss'; //样式引入
 
 import routes from './routes';
