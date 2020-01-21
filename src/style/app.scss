@@ -74,10 +74,18 @@
 }
 
 .playerWrap{
+	position: relative;
 	.video-js .vjs-big-play-button{
 	    top: 50%;
 		left: 50%;
     	transform: translate(-1.5em, -0.8em);	    
+	}
+	.videoPause{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: none;
+		transform: translate(-1.5em, -0.8em);
 	}
     
 }
