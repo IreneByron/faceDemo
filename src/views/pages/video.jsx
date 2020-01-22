@@ -69,7 +69,6 @@ export default class VideoList extends BaseComponent {
 							<Icon name="custom-play" className="video-tag"/>
 							<div className="detail-desc">{item.title}</div>
 						</Link>
-
 					</div>
 	            </For>
 			</ListView>

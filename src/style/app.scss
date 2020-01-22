@@ -73,14 +73,42 @@
 	}
 }
 
-.playerWrap{
-	.video-js .vjs-big-play-button{
-	    top: 50%;
-		left: 50%;
-    	transform: translate(-1.5em, -0.8em);	    
+.pageWrap{
+	video{
+		width: 7.5rem;
+		height: 10rem;
 	}
-    
+	.avatar-list{
+		padding: .25rem;
+		margin-right: -.2rem;
+		.avatar-item{
+			position: relative;
+			.avatar{
+				width: 1.6rem;
+				height: 1.6rem;
+				margin-right: .2rem;
+				display: block;
+			    border-radius: .8rem;
+			    overflow: hidden;
+			    img{
+			    	width: 100%;
+			    }
+			}
+			i{
+				position: absolute;
+				right: 0.2rem;
+    			bottom: -0.05rem;
+			}			
+		}	
+	}
+	.faceBtn{
+		width: 7rem;
+		margin-top: 0.2rem;
+		margin-bottom: 0.5rem
+	}
 }
+
+
 
 
 
